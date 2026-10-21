@@ -1,0 +1,85 @@
+/* Pill flutuante acima do BottomNav, à direita */
+.pill {
+  position: fixed;
+  right: var(--s-4);
+  bottom: calc(var(--nav-h) + var(--safe-b) + 12px);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+  padding: var(--s-1);
+  border-radius: var(--r-pill);
+}
+
+.open {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 44px;
+  padding: 0 var(--s-3) 0 var(--s-1);
+  border: 0;
+  border-radius: var(--r-pill);
+  background: none;
+  color: var(--c-text);
+}
+
+.time {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-black);
+}
+
+.play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: var(--c-on-primary);
+  box-shadow: var(--sh-primary);
+}
+
+.pulse {
+  animation: pulseDone 0.5s ease-in-out 3;
+  box-shadow: 0 0 0 2px var(--c-success), var(--sh-md);
+}
+
+@keyframes pulseDone {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-6);
+  padding-bottom: var(--s-2);
+}
+
+.bigRing {
+  margin-top: var(--s-2);
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-2);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-3);
+}
+
+@media (min-width: 1024px) {
+  .pill {
+    right: var(--s-6);
+    bottom: var(--s-6);
+  }
+}

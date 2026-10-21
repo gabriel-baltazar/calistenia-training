@@ -1,0 +1,33 @@
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #11141c;
+  user-select: none;
+}
+
+/* Animações do legado (pulseGlow / arrowMoveY) */
+.muscle {
+  animation: pulseGlow 1.6s ease-in-out infinite;
+}
+
+.arrow {
+  animation: arrowMoveY 1.2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; filter: drop-shadow(0 0 3px rgba(249, 115, 22, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.9)); }
+}
+
+@keyframes arrowMoveY {
+  0%, 100% { transform: translateY(-3px); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .muscle,
+  .arrow {
+    animation: none;
+  }
+}

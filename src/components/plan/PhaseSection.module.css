@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+}
+
+.range {
+  font-size: var(--fs-xs);
+  color: var(--c-text-3);
+}
+
+.count {
+  flex: none;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--s-2);
+}

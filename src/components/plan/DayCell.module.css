@@ -1,0 +1,78 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  min-height: 64px;
+  padding: var(--s-2) 2px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  transition: border-color var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out);
+}
+
+.cell:hover {
+  border-color: var(--c-border-strong);
+  background: var(--c-surface-3);
+}
+
+.sm {
+  min-height: 56px;
+}
+
+.weekday {
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-3);
+}
+
+.day {
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  font-weight: var(--fw-black);
+}
+
+.sm .day {
+  font-size: var(--fs-body);
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.done {
+  border-color: rgba(34, 197, 94, 0.45);
+  background: var(--c-success-soft);
+}
+
+.done .mark {
+  border-radius: 50%;
+  background: var(--c-success);
+  color: #fff;
+}
+
+.today {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px var(--c-primary-ring);
+}
+
+.today .weekday {
+  color: var(--c-primary-400);
+}
+
+.future .day {
+  color: var(--c-text-2);
+}
+
+.selected {
+  border-color: var(--c-primary-400);
+}

@@ -1,0 +1,60 @@
+.root {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Pôster estático (sempre presente; é o que aparece com reduced motion / sem WebGL) */
+.poster {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-hero);
+}
+
+.orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(70vw, 420px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.55) 0%, rgba(234, 88, 12, 0.2) 45%, rgba(234, 88, 12, 0) 70%);
+  filter: blur(28px);
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(60vw, 360px);
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.home .orb {
+  left: 72%;
+  width: 260px;
+}
+
+.home .ring {
+  left: 72%;
+  width: 200px;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  animation: fadeIn 0.6s var(--ease-out) both;
+}
+
+.canvas canvas {
+  max-width: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
