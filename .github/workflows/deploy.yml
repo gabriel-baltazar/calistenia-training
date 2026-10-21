@@ -18,8 +18,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      # Sem package-lock.json, `npm ci` falha (EUSAGE); nesse caso cai para `npm install`.
+      - name: Instalar dependências
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
       - run: npm run lint
       - run: npm run build
         env:
