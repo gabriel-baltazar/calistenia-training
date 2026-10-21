@@ -1,0 +1,196 @@
+.screen {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--grad-hero), var(--c-bg);
+}
+
+/* Mobile: herói só no topo (48svh); o cartão fica fora do canvas (§10.1). */
+.hero {
+  position: relative;
+  height: 48vh;
+  height: 48svh;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  height: 100%;
+  padding: calc(var(--safe-t) + var(--s-6)) var(--s-5) var(--s-6);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: var(--s-2);
+  border-radius: var(--r-md);
+  background: var(--grad-primary);
+  box-shadow: var(--sh-primary);
+  font-size: 26px;
+}
+
+.overline {
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-primary-400);
+}
+
+.title {
+  max-width: 14ch;
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  max-width: 36ch;
+  font-size: var(--fs-body);
+  color: var(--c-text-2);
+}
+
+.badge {
+  align-self: flex-start;
+  margin-top: var(--s-1);
+}
+
+.cardWrap {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  padding-bottom: calc(var(--s-6) + var(--safe-b));
+}
+
+.cardTitle {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: var(--fw-bold);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--r-md);
+  background: var(--c-danger-soft);
+  color: #fecaca;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+
+.bannerIcon {
+  flex: none;
+  margin-top: 1px;
+  color: var(--c-danger);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  color: var(--c-text-3);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--c-border-strong);
+}
+
+.tooltip {
+  display: block;
+  width: 100%;
+}
+
+.help {
+  margin-top: calc(var(--s-2) * -1);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--c-text-3);
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: var(--s-2);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--c-text-3);
+  text-align: center;
+}
+
+/* Desktop: herói em tela cheia; cartão de 420 px à direita, sobre a área sem núcleo. */
+@media (min-width: 768px) {
+  .screen {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: var(--s-8) clamp(var(--s-8), 6vw, var(--s-16));
+  }
+
+  .hero {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 0;
+    padding: 0 clamp(var(--s-8), 6vw, var(--s-16));
+  }
+
+  .heroContent {
+    height: auto;
+    max-width: min(520px, calc(100% - 420px - var(--s-12)));
+    padding: 0;
+  }
+
+  .cardWrap {
+    flex: none;
+    width: 420px;
+  }
+
+  .card {
+    flex: none;
+    border-radius: var(--r-xl);
+    padding-bottom: var(--s-6);
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+}

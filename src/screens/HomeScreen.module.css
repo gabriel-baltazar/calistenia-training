@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding-top: calc(var(--safe-t) + var(--s-5));
+}
+
+.headerText {
+  min-width: 0;
+}
+
+.hello {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: var(--fw-bold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heroCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+/* Cena 3D no lado direito do cartão-herói */
+.heroArt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-2);
+  max-width: 68%;
+}
+
+.heroContent > button {
+  margin-top: var(--s-3);
+}
+
+.heroDay {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-2);
+}
+
+.heroTitle {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.01em;
+}
+
+.heroText {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--c-text-2);
+}
+
+.emptyHero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-3);
+}
+
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 var(--s-8);
+  border-radius: var(--r-pill);
+  background: var(--grad-primary);
+  box-shadow: var(--sh-primary);
+  color: var(--c-on-primary);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+}
+
+.progressRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-5);
+}
+
+.statList {
+  flex: 1;
+  min-width: 200px;
+  display: grid;
+  gap: var(--s-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .statList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.phaseCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}

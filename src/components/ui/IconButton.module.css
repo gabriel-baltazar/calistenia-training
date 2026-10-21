@@ -1,0 +1,39 @@
+.button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: var(--c-text);
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.button:not(:disabled):active {
+  transform: scale(0.94);
+}
+
+.button:disabled {
+  opacity: 0.45;
+}
+
+/* Alvo de toque de 44 px mesmo no tamanho sm (área visual 36 px). */
+.md { width: 44px; height: 44px; }
+.sm { width: 36px; height: 36px; margin: 4px; }
+
+.solid {
+  background: var(--c-surface-2);
+  border-color: var(--c-border);
+}
+.solid:not(:disabled):hover { background: var(--c-surface-3); }
+
+.ghost {
+  background: transparent;
+  color: var(--c-text-2);
+}
+.ghost:not(:disabled):hover { background: var(--c-surface-2); color: var(--c-text); }
+
+.icon {
+  display: inline-flex;
+}

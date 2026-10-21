@@ -1,0 +1,46 @@
+.chip {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--s-1);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-pill);
+  background: var(--c-surface-2);
+  color: var(--c-text-2);
+  font-weight: var(--fw-semibold);
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.sm { min-height: 28px; padding: 0 var(--s-3); font-size: var(--fs-xs); }
+.md { min-height: 36px; padding: 0 var(--s-4); font-size: var(--fs-sm); }
+
+/* Alvo de toque ≥ 44 px nos chips clicáveis sem aumentar o visual. */
+.clickable {
+  position: relative;
+}
+.clickable::after {
+  content: '';
+  position: absolute;
+  inset: -4px 0;
+  min-height: 44px;
+}
+.clickable:not(:disabled):hover {
+  color: var(--c-text);
+  border-color: var(--c-border-strong);
+}
+.clickable:disabled {
+  opacity: 0.5;
+}
+
+.selected,
+.selected.clickable:not(:disabled):hover {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+  color: var(--c-on-primary);
+}
+
+.icon {
+  display: inline-flex;
+}

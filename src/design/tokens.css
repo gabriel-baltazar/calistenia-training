@@ -1,0 +1,65 @@
+:root {
+  /* Cores */
+  --c-bg: #0E0E10;            /* fundo do app */
+  --c-bg-elev: #151518;       /* faixas/seções */
+  --c-surface: #1C1C21;       /* cards */
+  --c-surface-2: #25252B;     /* inputs, células, hover */
+  --c-surface-3: #303038;     /* trilhas de progresso, bordas fortes */
+  --c-border: rgba(255,255,255,0.08);
+  --c-border-strong: rgba(255,255,255,0.14);
+  --c-text: #FFFFFF;
+  --c-text-2: #B4B4BE;        /* secundário (AA sobre surface) */
+  --c-text-3: #7C7C88;        /* legendas, desabilitado */
+  --c-primary: #F97316;
+  --c-primary-600: #EA580C;   /* pressed */
+  --c-primary-400: #FB923C;   /* hover/realce */
+  --c-primary-soft: rgba(249,115,22,0.14);
+  --c-primary-ring: rgba(249,115,22,0.45);
+  --c-on-primary: #FFFFFF;
+  --c-success: #22C55E; --c-success-soft: rgba(34,197,94,0.14);
+  --c-danger: #EF4444;  --c-danger-soft: rgba(239,68,68,0.14);
+  --c-warning: #F59E0B;
+  --c-info: #60A5FA;
+  --grad-primary: linear-gradient(135deg, #FB923C 0%, #F97316 45%, #EA580C 100%);
+  --grad-hero: radial-gradient(120% 80% at 80% 0%, rgba(249,115,22,0.35) 0%, rgba(249,115,22,0) 60%),
+               radial-gradient(90% 60% at 0% 100%, rgba(234,88,12,0.18) 0%, rgba(234,88,12,0) 70%);
+  /* Glass */
+  --glass-bg: rgba(28,28,33,0.55);
+  --glass-bg-strong: rgba(20,20,24,0.78);
+  --glass-border: rgba(255,255,255,0.10);
+  --glass-blur: 18px;
+  --glass-highlight: inset 0 1px 0 rgba(255,255,255,0.06);
+  /* Raios */
+  --r-xs: 8px; --r-sm: 12px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px; --r-pill: 999px;
+  /* Espaçamento (base 4) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px;
+  /* Tipografia */
+  --font-sans: 'Work Sans Variable', 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-display: 2.5rem;  --lh-display: 1.1;  /* 40px, peso 800, tracking -0.02em */
+  --fs-h1: 2rem;         --lh-h1: 1.15;      /* 32px, 700 */
+  --fs-h2: 1.5rem;       --lh-h2: 1.2;       /* 24px, 700 */
+  --fs-h3: 1.25rem;      --lh-h3: 1.3;       /* 20px, 600 */
+  --fs-body: 1rem;       --lh-body: 1.5;     /* 16px, 400 */
+  --fs-sm: 0.875rem;     --lh-sm: 1.45;      /* 14px */
+  --fs-xs: 0.75rem;      --lh-xs: 1.35;      /* 12px, 500 */
+  --fs-overline: 0.6875rem;                  /* 11px, 700, uppercase, tracking 0.08em */
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700; --fw-black: 800;
+  /* Sombras */
+  --sh-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --sh-md: 0 8px 24px rgba(0,0,0,0.45);
+  --sh-lg: 0 20px 48px rgba(0,0,0,0.55);
+  --sh-primary: 0 10px 30px rgba(249,115,22,0.35);
+  /* Movimento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 320ms;
+  /* Layout */
+  --nav-h: 72px; --content-max: 1120px; --rail-w: 232px;
+  --safe-b: env(safe-area-inset-bottom, 0px); --safe-t: env(safe-area-inset-top, 0px);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-display: 3.25rem;
+    --fs-h1: 2.5rem;
+  }
+}

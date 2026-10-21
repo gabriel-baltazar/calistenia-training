@@ -1,0 +1,33 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-4);
+  background: var(--grad-hero), var(--c-bg);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: var(--r-lg);
+  background: var(--grad-primary);
+  box-shadow: var(--sh-primary);
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.brand {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.02em;
+}
+
+.spinner {
+  color: var(--c-primary);
+}

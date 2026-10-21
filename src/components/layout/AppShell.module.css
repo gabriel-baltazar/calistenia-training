@@ -1,0 +1,35 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Fundo fixo: --c-bg + gradiente laranja sutil */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--grad-hero), var(--c-bg);
+  pointer-events: none;
+}
+
+.main {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--s-4) calc(var(--nav-h) + var(--safe-b) + 16px);
+}
+
+.page {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .shell {
+    padding-left: var(--rail-w);
+  }
+
+  .main {
+    padding: 0 var(--s-8) var(--s-12);
+  }
+}

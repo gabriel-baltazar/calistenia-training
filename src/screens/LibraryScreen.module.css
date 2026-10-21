@@ -1,0 +1,113 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.mapCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.mapBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.map {
+  height: 288px;
+  padding: var(--s-4);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  background: #11131a;
+}
+
+.grid {
+  display: grid;
+  gap: var(--s-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  height: 100%;
+  border: 1px solid var(--c-border);
+}
+
+.muscle {
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-primary-400);
+}
+
+.name {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+}
+
+.nameButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.nameButton:hover {
+  color: var(--c-primary-400);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-top: auto;
+  padding-top: var(--s-2);
+  border-top: 1px solid var(--c-border);
+}
+
+.target {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-2);
+}
+
+.video {
+  flex: none;
+  color: var(--c-primary-400);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+}
+
+.video:hover {
+  text-decoration: underline;
+}
+
+.empty {
+  padding: var(--s-8) 0;
+  color: var(--c-text-2);
+  text-align: center;
+}

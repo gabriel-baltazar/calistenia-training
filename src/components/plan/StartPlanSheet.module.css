@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.hint {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--c-text-2);
+}
