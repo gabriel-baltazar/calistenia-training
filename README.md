@@ -6,13 +6,12 @@ Site: <https://gabriel-baltazar.github.io/calistenia-training/>
 
 ### Capturas de tela
 
-As capturas entram depois da verificação visual no navegador. Por enquanto não há imagens versionadas, então esta seção fica sem links para não mostrar imagens quebradas.
+<p>
+  <img src="docs/screenshots/login-mobile.png" alt="Login no celular: fundo 3D e cartão glass" width="240" />
+  <img src="docs/screenshots/inicio-mobile.png" alt="Início no celular: treino do dia e progresso" width="240" />
+</p>
 
-<!-- Links pendentes (adicionar quando os arquivos existirem em docs/screenshots/):
-![Login](docs/screenshots/login-mobile.png)
-![Início](docs/screenshots/inicio-mobile.png)
-![Treino](docs/screenshots/treino-desktop.png)
--->
+![Treino do dia no desktop](docs/screenshots/treino-desktop.png)
 
 ## Funcionalidades
 
