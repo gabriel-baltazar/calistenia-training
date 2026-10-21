@@ -29,3 +29,9 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
+      # Build sem VITE_FIREBASE_* (modo local), publicado para a verificação no navegador.
+      - name: Publicar dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
