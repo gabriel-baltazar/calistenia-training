@@ -4,6 +4,11 @@
   flex: none;
 }
 
+/* Arco começa no topo; a rotação fica no <svg> para não disputar o transform do Framer. */
+.svg {
+  transform: rotate(-90deg);
+}
+
 .track {
   stroke: var(--c-surface-3);
 }

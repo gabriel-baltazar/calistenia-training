@@ -27,7 +27,7 @@ export function ProgressRing({ value, size = 120, stroke = 10, label, sublabel, 
 
   return (
     <div className={cx(s.ring, className)} style={{ width: size, height: size }} role="img" aria-label={ariaLabel}>
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
+      <svg className={s.svg} width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
         <defs>
           <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
             {tone === 'success' ? (
@@ -57,7 +57,6 @@ export function ProgressRing({ value, size = 120, stroke = 10, label, sublabel, 
           initial={initial}
           animate={{ strokeDashoffset: offset }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          transform={`rotate(-90 ${size / 2} ${size / 2})`}
           style={{ opacity: clamped === 0 ? 0 : 1 }}
         />
       </svg>
