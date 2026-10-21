@@ -1,0 +1,5 @@
+.message {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-text-2);
+}
