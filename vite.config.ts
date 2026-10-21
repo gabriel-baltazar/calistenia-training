@@ -14,11 +14,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // framer-motion fica fora de propósito: o Rollup separa o domMax no chunk assíncrono.
-        manualChunks: {
-          // react/jsx-runtime fica aqui: senão o Rollup o põe no chunk do R3F e o index passa a pré-carregar o three.
-          react: ['react', 'react/jsx-runtime', 'react-dom', 'react-router-dom'],
-          three: ['three', '@react-three/fiber'],
-          firebase: ['firebase/app', 'firebase/auth'],
+        // Forma de função (por caminho): com a forma de objeto, os módulos CJS internos de
+        // react/jsx-runtime iam para o chunk three, e o index passava a pré-carregar o three.
+        manualChunks(id) {
+          if (id.includes('commonjsHelpers')) return 'react';
+          if (!id.includes('node_modules')) return undefined;
+          if (/[\\/]node_modules[\\/](three|@react-three)[\\/]/.test(id)) return 'three';
+          if (/[\\/]node_modules[\\/](firebase|@firebase)[\\/]/.test(id)) return 'firebase';
+          if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|@remix-run|scheduler)[\\/]/.test(id)) {
+            return 'react';
+          }
+          return undefined;
         },
       },
     },
